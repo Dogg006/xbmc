@@ -178,7 +178,7 @@ namespace PythonBindings
 
     if (exc_type != NULL && (pystring = PyObject_Str(exc_type)) != NULL && PyUnicode_Check(pystring))
     {
-      char *str = PyUnicode_AsUTF8(pystring);
+      const char *str = PyUnicode_AsUTF8(pystring);
       if (str != NULL)
         exceptionType = str;
 
